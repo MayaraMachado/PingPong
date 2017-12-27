@@ -13,9 +13,7 @@ Cada jogador pode movimentar um bastão no sentido vertical para defender seu go
 direcionar o movimento da bola.
 
 ### Movimento da bola. 
-- A bola se movimenta sempre com velocidade horizontal constante. O sentido da
-velocidade horizontal muda sempre que ocorre a colisão com as bordas verticais do campo, ou quando
-colide com um bastão. 
+- A bola se movimenta sempre com velocidade horizontal constante. O sentido da velocidade horizontal muda sempre que ocorre a colisão com as bordas verticais do campo, ou quando colide com um bastão. 
 
 - A velocidade vertical muda sempre que ocorre colisão com uma das bordas
 horizontais. 
