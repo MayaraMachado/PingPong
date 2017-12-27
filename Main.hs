@@ -1,6 +1,7 @@
 module Main where
 
 import Graphics.Gloss
+import Graphics.Gloss.Data.ViewPort
 
 data PongGame = Game { posicaoEspaco :: (Float, Float) 
                       , velocidade :: (Float, Float)
@@ -93,7 +94,23 @@ background = black
 --         paletaPlayer2 = red
 --         parede = light (light (light black))
 
+moverBola :: Float -> PongGame -> PongGame
+moverBola seconds game = game { posicaoEspaco = (x', y') }
+    where
+        (x,y) = posicaoEspaco game
+        (vx, vy) = velocidade game
+
+        x' = x + vx * seconds
+        y' = y + vy * seconds
 
 
+
+        
+        
+        
+        
 main :: IO ()
-main = display window background (drawGame initialState )
+main = simulate window background 60 initialState drawGame update
+
+update :: ViewPort -> Float -> PongGame -> PongGame
+update _ = moverBola
